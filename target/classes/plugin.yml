@@ -1,0 +1,35 @@
+name: Mimic
+version: 1.0.0
+main: com.wjddusrb03.mimic.Mimic
+api-version: '1.21'
+description: 변장 몹 시스템 - 블록으로 위장한 몹이 기습 공격
+author: wjddusrb03
+
+commands:
+  mimic:
+    description: Mimic 메인 명령어
+    aliases: [mm]
+    usage: /mimic help
+    permission: mimic.use
+
+permissions:
+  mimic.use:
+    default: true
+  mimic.admin.spawn:
+    default: op
+  mimic.admin.remove:
+    default: op
+  mimic.admin.list:
+    default: op
+  mimic.admin.give:
+    default: op
+  mimic.admin.reload:
+    default: op
+  mimic.admin.*:
+    default: op
+    children:
+      mimic.admin.spawn: true
+      mimic.admin.remove: true
+      mimic.admin.list: true
+      mimic.admin.give: true
+      mimic.admin.reload: true
